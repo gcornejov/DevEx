@@ -1,0 +1,10 @@
+{
+    "id": "chrome-for-testing",
+    "version": "0.1.0",
+    "name": "Google Chrome for Testing",
+    "description": "Install Google Chrome and Chrome Driver",
+    "documentationURL": "https://github.com/gcornejov/DevEX/blob/main/features/src/chrome-for-testing/README.md",
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/common-utils:2": {}
+    }
+}

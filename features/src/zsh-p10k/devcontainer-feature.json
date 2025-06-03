@@ -1,0 +1,15 @@
+{
+    "id": "zsh-p10k",
+    "version": "0.1.0",
+    "name": "ZSH Powerlevel10k",
+    "description": "Setup Powerlevel10k theme for ZSH shell",
+    "documentationURL": "https://github.com/gcornejov/DevEX/blob/main/features/src/zsh-p10k/README.md",
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/common-utils:2": {"configureZshAsDefaultShell": true},
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
+            "plugins": "zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting",
+            "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions.git https://github.com/zsh-users/zsh-syntax-highlighting.git https://github.com/zdharma-continuum/fast-syntax-highlighting.git"
+        }
+    }
+}
