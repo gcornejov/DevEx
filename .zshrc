@@ -78,7 +78,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker gcloud poetry zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
+plugins=(git docker gcloud poetry uv terraform zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,6 +110,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export GCLOUD_CREDS_VOLUME=$(docker volume ls -f dangling=false --format "{{.Name}}" | grep gcloud-cli)
 
 [ -d ./.venv ] && command -v poetry 2>&1 >/dev/null && eval $(poetry env activate)
 
